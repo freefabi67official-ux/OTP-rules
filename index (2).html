@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OPT Clan — Offizielles Regelwerk</title>
+  <meta name="description" content="Modernes, übersichtliches Regelwerk des OPT Clans auf OPSucht — responsiv, elegant, grünes Design." />
+  <style>
+    :root{
+      --bg:#12080a;          /* deep almost-black green */
+      --panel:#1b0d0f;       /* panel */
+      --muted:#bda3a3;
+      --text:#ffdede;
+      --accent:#10b981;      /* emerald */
+      --accent-2:#34d399;    /* soft green */
+      --glass: rgba(255,255,255,0.02);
+      --max-w:980px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:radial-gradient(800px 400px at 10% 10%, rgba(16,185,129,0.06), transparent), linear-gradient(180deg,var(--bg),#0a0607);font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+
+    .wrap{max-width:var(--max-w);margin:28px auto;padding:18px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo-shell{width:64px;height:64px;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center}
+    .logo-shell img{width:100%;height:100%;object-fit:cover;display:block}
+    .title{line-height:1}
+    h1{margin:0;font-size:18px;color:var(--accent)}
+    p.subtitle{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:10px;align-items:center}
+    nav a{font-weight:600;color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+    nav a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
+
+    /* hero - simplified */
+    .hero{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding:18px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+    .hero-left{flex:1}
+    .hero h2{margin:0;font-size:22px;color:var(--accent)}
+    .hero p{margin:8px 0;color:var(--muted)}
+
+    /* content - simple flow, no many boxes */
+    main{display:grid;grid-template-columns:1fr 300px;gap:20px;margin-top:16px}
+    .content{background:transparent;padding:6px}
+    section.rule{padding:12px 0;border-top:1px dashed rgba(255,255,255,0.03)}
+    section.rule:first-of-type{border-top:none}
+    section.rule h3{margin:0 0 8px 0;color:var(--accent)}
+    section.rule p{margin:6px 0;color:var(--text)}
+    ul{margin:8px 0 8px 18px;color:var(--muted)}
+
+    /* aside - compact */
+    aside{position:relative}
+    .aside-inner{position:sticky;top:24px;padding:12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
+    .aside-inner h4{margin:0 0 8px 0;color:var(--accent)}
+    .cta{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .btn{padding:10px;border-radius:8px;border:none;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;font-weight:700;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* decorative hero image slot */
+    .hero-visual{width:140px;height:140px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center}
+    .hero-visual img{width:100%;height:100%;object-fit:cover}
+
+    footer{margin-top:20px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){main{grid-template-columns:1fr;}.hero{flex-direction:column;align-items:flex-start}.hero-visual{width:120px;height:120px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo-shell" id="logoShellHeader">
+          <img id="logoHeader" src="logo/logo.png" alt="OPT Logo" style="display:block" onerror="this.style.display='none'" />
+        </div>
+        <div class="title">
+          <h1>OPT Clan</h1>
+          <p class="subtitle">Offizielles Regelwerk auf OPSucht</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#allgemein">Allgemein</a>
+        <a href="#discord">Discord</a>
+        <a href="#aktivitaet">Teilnahme</a>
+        <a href="#events">Events</a>
+        <a href="#sicherheit">Sicherheit</a>
+        <a href="#impressum">Impressum</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-left">
+        <h2>Willkommen im OPT Clan auf OPSucht</h2>
+        <p>Dieses Regelwerk soll ein faires, respektvolles und angenehmes Miteinander im Clan, auf dem Server und auf Discord gewährleisten. Mit dem Beitritt erklärst du dich mit allen untenstehenden Regeln einverstanden.</p>
+        <div style="margin-top:10px;display:flex;gap:8px">
+          <span style="background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:700">Respect</span>
+          <span style="background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:700">Fairplay</span>
+        </div>
+      </div>
+      <div class="hero-visual" id="heroVisual">
+        <img id="logoHero" src="logo/logo.png" alt="OPT Logo" style="display:block" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <main>
+      <div class="content">
+        <section class="rule" id="allgemein">
+          <h3>⚖️ 1. Allgemeines Verhalten</h3>
+          <p><strong>Respekt:</strong> Behandle alle Mitglieder, Gäste und Partner mit Höflichkeit, Fairness und Respekt – unabhängig von Rang, Alter oder Meinung.</p>
+          <p><strong>Sprache:</strong> Beleidigende, diskriminierende, rassistische oder vulgäre Ausdrücke sind strengstens untersagt.</p>
+          <p><strong>Streitigkeiten:</strong> Persönliche Konflikte gehören nicht in öffentliche Chats. Klärt sie privat oder wendet euch an die Clanleitung, falls nötig.</p>
+          <p><strong>Vorbildfunktion:</strong> Jeder repräsentiert den Clan auf OPSucht – verhalte dich dementsprechend verantwortungsbewusst.</p>
+          <p><strong>Fairplay:</strong> Kein Griefing, Stehlen, Hacking oder Bugusing – insbesondere nicht auf dem Clan-Plot (<code>/sw Tal</code>).</p>
+        </section>
+
+        <section class="rule" id="discord">
+          <h3>💬 2. Verhalten auf Discord</h3>
+          <p><strong>Respektvoller Umgang:</strong> Gleich wie im Spiel – keine Beleidigungen, kein toxisches Verhalten.</p>
+          <p><strong>Spam &amp; Flooding:</strong> Wiederholte Nachrichten, Emojis oder übermäßige Pings sind untersagt.</p>
+          <p><strong>Kanalordnung:</strong> Nutze jeden Kanal zweckentsprechend.</p>
+          <p><strong>Pings:</strong> Erwähne andere Mitglieder oder Rollen nur, wenn es wirklich notwendig ist.</p>
+          <p><strong>Unnötiges Channel-Swapping:</strong> Häufiges oder sinnloses Wechseln zwischen Voice-Channels ist nicht erlaubt und stört andere Mitglieder.</p>
+          <p><strong>Werbung:</strong> Fremdwerbung (Server, Social Media, Produkte etc.) ist ohne Genehmigung der Leitung verboten.</p>
+        </section>
+
+        <section class="rule" id="aktivitaet">
+          <h3>🔥 3. Teilnahme &amp; Aktivität</h3>
+          <p><strong>Aktivität:</strong> Sei regelmäßig aktiv auf OPSucht und auf Discord. Der Clan lebt von aktiver Teilnahme!</p>
+          <p><strong>Abwesenheit:</strong> Wenn du länger nicht online sein kannst, informiere die Clanleitung im Voraus.</p>
+          <p><strong>Inaktive Mitglieder:</strong> Längere Inaktivität ohne Meldung kann zum Ausschluss führen.</p>
+        </section>
+
+        <section class="rule" id="events">
+          <h3>🏆 4. Clan-Events</h3>
+          <p><strong>An- &amp; Abmeldung:</strong> Melde dich frühzeitig für Events an – oder rechtzeitig ab, falls du verhindert bist.</p>
+          <p><strong>Verhalten während Events:</strong> Sei pünktlich, konzentriert und halte dich an alle Anweisungen der Eventleitung.</p>
+          <p><strong>Fairness &amp; Teamgeist:</strong> Gewinne mit Stil, verliere mit Würde – respektiere andere Teilnehmende.</p>
+        </section>
+
+        <section class="rule" id="sicherheit">
+          <h3>🔐 5. Sicherheit &amp; Datenschutz</h3>
+          <p><strong>Privatsphäre:</strong> Gib keine privaten Daten (z. B. Wohnort, Telefonnummer, Passwörter) weiter.</p>
+          <p><strong>Verdächtige Links:</strong> Klicke keine unbekannten oder unseriösen Links. Melde sie sofort an die Clanleitung.</p>
+        </section>
+
+        <section class="rule" id="konsequenzen">
+          <h3>⚠️ 6. Konsequenzen bei Regelverstößen</h3>
+          <p>Je nach Schweregrad kann die Clanleitung folgende Maßnahmen ergreifen:</p>
+          <ul>
+            <li>Mündliche oder schriftliche Verwarnung</li>
+            <li>Temporäre Sperre (In-Game oder Discord)</li>
+            <li>Permanent-Ausschluss aus dem Clan</li>
+          </ul>
+          <p class="muted">Wiederholte oder besonders schwere Verstöße führen ohne Vorwarnung zum Ausschluss.</p>
+        </section>
+
+        <section class="rule">
+          <h3>🛡️ 7. Schlussbestimmungen</h3>
+          <p class="muted">Die Clanleitung behält sich vor, das Regelwerk jederzeit zu erweitern oder anzupassen. Unwissenheit schützt nicht vor Konsequenzen.</p>
+          <p>Mit dem Beitritt in den OPT Clan erklärst du dich mit allen Regeln vollständig einverstanden.</p>
+          <p class="muted">✨ Gemeinsam stark – fair, respektvoll und als Team auf OPSucht!</p>
+          <p class="muted">💬 Bei Fragen oder Problemen kannst du dich jederzeit an die Clanleitung wenden.</p>
+        </section>
+
+        <section class="rule" id="impressum">
+          <h3>Impressum</h3>
+          <p class="muted">Angaben gemäß Vorgabe</p>
+          <p>Name / Betreiber: <strong>freefabi67</strong></p>
+          <p>Kontakt: <a href="mailto:dvbg.official@gmail.com">dvbg.official@gmail.com</a></p>
+        </section>
+      </div>
+
+      <aside>
+        <div class="aside-inner">
+          <h4>Kurzübersicht</h4>
+          <p class="muted">Respekt • Kein Hass • Fairplay • Aktiv bleiben</p>
+
+          <div class="cta">
+            <button class="btn" onclick="location.href='mailto:opt.official@gmail.com'">Kontakt</button>
+            <button class="btn ghost" onclick="alert('Support: wende dich im Discord an die Clanleitung.')">Support</button>
+          </div>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">
+            © <span id="year"></span> OPT Clan — freefabi67
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p class="muted">Bei Fragen oder Problemen: wendet euch an die Clanleitung (first.otp.official@gmail.com).</p>
+    </footer>
+  </div>
+
+  <script>
+    // Try multiple logo locations and apply to header + hero. Fallback to text block if none found.
+    (function(){
+      const candidates = ['logo/logo.png','logo.png'];
+      function test(src){
+        return new Promise(res=>{const i=new Image();i.src=src;i.onload=()=>res(src);i.onerror=()=>res(null)});
+      }
+
+      (async ()=>{
+        let found = null;
+        for(const c of candidates){
+          const ok = await test(c);
+          if(ok){ found = ok; break }
+        }
+
+        const headerImg = document.getElementById('logoHeader');
+        const heroImg = document.getElementById('logoHero');
+        const headerShell = document.getElementById('logoShellHeader');
+        const heroShell = document.getElementById('heroVisual');
+
+        if(found){
+          if(headerImg) headerImg.src = found, headerImg.style.display='block';
+          if(heroImg) heroImg.src = found, heroImg.style.display='block';
+        } else {
+          // create simple text fallback in both places
+          const fallbackHeader = document.createElement('div');
+          fallbackHeader.style.display='flex';fallbackHeader.style.alignItems='center';fallbackHeader.style.justifyContent='center';fallbackHeader.style.width='100%';fallbackHeader.style.height='100%';fallbackHeader.style.fontWeight='800';fallbackHeader.style.color='white';fallbackHeader.textContent='OPT';
+          headerShell.innerHTML=''; headerShell.appendChild(fallbackHeader);
+
+          const fallbackHero = document.createElement('div');
+          fallbackHero.style.display='flex';fallbackHero.style.alignItems='center';fallbackHero.style.justifyContent='center';fallbackHero.style.width='100%';fallbackHero.style.height='100%';fallbackHero.style.fontWeight='800';fallbackHero.style.color='white';fallbackHero.style.fontSize='22px';fallbackHero.textContent='OPT';
+          heroShell.innerHTML=''; heroShell.appendChild(fallbackHero);
+        }
+      })();
+    })();
+
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').slice(1);const el=document.getElementById(id);if(el) el.scrollIntoView({behavior:'smooth',block:'start'})}));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
